@@ -1,0 +1,44 @@
+* {
+    font-family: "Roboto Mono", "Font Awesome", sans-serif;
+    font-weight: bold;
+    min-height: 0;
+    border-radius: 10px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 2px;
+    color: black;
+    margin: 3px 2px;
+    background-color: #faebd7;
+    transition: all 0.15s cubic-bezier(0.4, 0.0, 0.2, 1);
+    font-size: 0px;
+    min-width: 10px;
+}
+#workspaces button.active {
+    background-color: #faebd7;
+    min-width: 40px;
+    transition: all 0.15s cubic-bezier(0.4, 0.0, 0.2, 1);
+    font-size: 14px;
+}
+#workspaces button.empty{
+    background-color: #b6a691;
+}
+
+/* All modules */
+#clock, #pulseaudio, #memory, #cpu{
+    padding: 3px 10px;
+    margin: 3px 4px;
+    color: #42403b;
+    background-color: #faebd7;
+}
+
+#tray{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+

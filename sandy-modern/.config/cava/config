@@ -1,0 +1,26 @@
+[general]
+# Leave defaults, just uncomment what you need
+; framerate = 60
+; bars = 0
+
+[input]
+# Auto-detect audio method
+; method = pulse
+; source = auto
+
+[output]
+# Default ncurses output
+; method = noncurses
+
+[color]
+# Simple Gruvbox gradient
+gradient = 1
+gradient_count = 4
+gradient_color_1 = '#98971a'
+gradient_color_2 = '#d79921'
+gradient_color_3 = '#fe8019'
+gradient_color_4 = '#fb4934'
+
+[smoothing]
+# Default smoothing
+; noise_reduction = 77

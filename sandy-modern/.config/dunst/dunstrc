@@ -1,0 +1,44 @@
+[global]
+    # Position and geometry
+    origin = "top-right"
+    offset = (30, 30)
+    width = (0, 300)
+    height = (0, 100)
+    notification_limit = 3
+    stack_duplicates = true
+    shrink = false
+    idle_threshold = 120
+
+    # Font
+    font = "Roboto Mono 10"
+
+    # Visuals
+    line_height = 0
+    padding = 12
+    horizontal_padding = 12
+    text_icon_padding = 12
+    frame_width = 2
+    frame_color = "#C9B8A0"
+    separator_color = "#928374"
+
+    # Transparency
+    transparency = 10
+    corner_radius = 8
+
+    timeout = 5
+
+[urgency_low]
+    background = "#282828"
+    foreground = "#ebdbb2"
+    timeout = 4
+
+[urgency_normal]
+    background = "#3c3836"
+    foreground = "#ebdbb2"
+    timeout = 5
+
+[urgency_critical]
+    background = "#fb4934"
+    foreground = "#fbf1c7"
+    frame_color = "#fb4934"
+    timeout = 0

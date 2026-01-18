@@ -1,0 +1,53 @@
+[window]
+padding = { x = 15, y = 15 }
+dynamic_padding = true
+decorations = "buttonless"
+opacity = 0
+blur = false
+
+[font]
+normal = { family = "Roboto Mono", style = "Regular" }
+bold = { family = "Roboto Mono", style = "Bold" }
+italic = { family = "Roboto Mono", style = "Italic" }
+size = 12.0
+
+# Fix letter spacing
+offset.x = 0
+offset.y = 0
+glyph_offset.x = 0
+glyph_offset.y = 0
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+
+[colors.primary]
+background = "#282828"
+foreground = "#ebdbb2"
+
+[colors.cursor]
+text = "CellBackground"
+cursor = "CellForeground"
+
+[colors.normal]
+black = "#282828"
+red = "#cc241d"
+green = "#98971a"
+yellow = "#d79921"
+blue = "#458588"
+magenta = "#b16286"
+cyan = "#689d6a"
+white = "#a89984"
+
+[colors.bright]
+black = "#928374"
+red = "#fb4934"
+green = "#b8bb26"
+yellow = "#fabd2f"
+blue = "#83a598"
+magenta = "#d3869b"
+cyan = "#8ec07c"
+white = "#ebdbb2"
