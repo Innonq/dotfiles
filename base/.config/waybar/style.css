@@ -2,7 +2,7 @@
     font-family: "Roboto Mono", "Font Awesome", sans-serif;
     font-weight: bold;
     min-height: 0;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 window#waybar {
@@ -19,26 +19,38 @@ window#waybar {
     font-size: 0px;
     min-width: 10px;
 }
+
 #workspaces button.active {
     background-color: #faebd7;
     min-width: 40px;
     transition: all 0.15s cubic-bezier(0.4, 0.0, 0.2, 1);
     font-size: 14px;
 }
-#workspaces button.empty{
-    background-color: #b6a691;
+
+#workspaces button.empty {
+    background-color: #504945;
 }
 
 /* All modules */
-#clock, #pulseaudio, #memory, #cpu{
+#clock,
+#pulseaudio,
+#memory,
+#cpu {
     padding: 3px 10px;
     margin: 3px 4px;
     color: #42403b;
-    background-color: #faebd7;
+    background-color: #C9B8A0;
 }
 
-#tray{
+#tray {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-
+/* Ticker module — scrolling handled by script */
+#custom-ticker {
+    padding: 3px 10px;
+    margin: 3px 4px;
+    color: #42403b;
+    background-color: #C9B8A0;
+    min-width: 220px;
+}

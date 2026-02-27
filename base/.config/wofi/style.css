@@ -2,12 +2,12 @@
     font-family: "Roboto Mono", "Font Awesome", sans-serif;
     font-size:14px;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 8px;
     color:black;
 }
 window {
     margin: 5px;
-    background-color: rgba(40, 40, 40, 0.7);
+    background-color: rgba(40, 40, 40, 0.9);
 
 }
 

@@ -27,7 +27,12 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 ###   ALIASES   ###
 ###################
 
-alias qwencoder='ollama run qwencoder --think=false'
+# Quality of Life Aliases
+alias ls='ls --color=auto'
+alias ll='ls -lah'
+alias la='ls -A'
+alias l='ls -CF'
+alias grep='grep --color=auto'
 
 ###################
 ### KEYBINDINGS ###
@@ -71,7 +76,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ###################
 export EDITOR=nvim
 export VISUAL=nvim
-
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+export PATH="$HOME/.local/bin:$PATH"
 
 ###################
 ### MISC OPTIONS ###
