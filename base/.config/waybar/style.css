@@ -37,7 +37,9 @@ window#waybar {
 #memory,
 #cpu,
 #battery,
-#backlight {
+#backlight,
+#network,
+#bluetooth {
     padding: 3px 10px;
     margin: 3px 4px;
     color: #42403b;

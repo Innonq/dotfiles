@@ -12,6 +12,8 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
+        "network",
+        "bluetooth",
         "backlight",
         "cpu",
         "memory",
@@ -77,6 +79,22 @@
     },
     "tray": {
         "spacing": 10
+    },
+    "network": {
+        "format-wifi": "WiFi: {essid}",
+        "format-ethernet": "ETH: {ipaddr}",
+        "format-disconnected": "WiFi: Off",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}",
+        "tooltip-format-ethernet": "{ifname}\n{ipaddr}",
+        "on-click": "nm-connection-editor"
+    },
+    "bluetooth": {
+        "format": "BT: {status}",
+        "format-connected": "BT: {device_alias}",
+        "format-disabled": "BT: Off",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "blueman-manager"
     },
     "custom/ticker": {
         "exec": "~/.config/waybar/waybar-ticker.sh",
