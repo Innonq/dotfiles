@@ -35,7 +35,9 @@ window#waybar {
 #clock,
 #pulseaudio,
 #memory,
-#cpu {
+#cpu,
+#battery,
+#backlight {
     padding: 3px 10px;
     margin: 3px 4px;
     color: #42403b;

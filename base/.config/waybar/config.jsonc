@@ -12,9 +12,11 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
+        "backlight",
         "cpu",
         "memory",
         "pulseaudio",
+        "battery",
         "tray"
     ],
     "hyprland/workspaces": {
@@ -44,7 +46,7 @@
     },
     "pulseaudio": {
         "format": "VOL: {volume}%",
-        "format-muted": "",
+        "format-muted": "VOL: Muted",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -59,6 +61,19 @@
             ]
         },
         "on-click": "pavucontrol"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "BAT: {capacity}%",
+        "format-charging": "CHG: {capacity}%",
+        "format-plugged": "PLG: {capacity}%"
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "LGT: {percent}%"
     },
     "tray": {
         "spacing": 10
