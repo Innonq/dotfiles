@@ -19,6 +19,108 @@ All UI components are unified under a specific aesthetic:
 - **Border Width**: `2px`
 - **Palette**: Dark Gruvbox (`#282828`, `#3c3836`) and Beige (`#ebdbb2`, `#C9B8A0`, `#faebd7`)
 
+## Dependencies
+
+### Core
+
+| Package | Purpose |
+|---|---|
+| `hyprland` | Window manager |
+| `waybar` | Status bar |
+| `wofi` | App launcher & power menu |
+| `dunst` | Notifications (OSD for volume/brightness) |
+| `alacritty` | Terminal emulator |
+| `zsh` | Shell |
+| `neovim` | Editor |
+
+### Hyprland Ecosystem
+
+| Package | Purpose |
+|---|---|
+| `hyprpaper` | Wallpaper |
+| `hyprlock` | Lock screen |
+| `hypridle` | Idle daemon (auto-lock, screen off) |
+| `hyprpolkitagent` | Polkit authentication agent |
+
+### Utilities
+
+| Package | Purpose |
+|---|---|
+| `grimblast-git` | Screenshots (`Super + S` / `Super + Shift + S`) |
+| `cliphist` | Clipboard history (`Super + C`) |
+| `wl-clipboard` | Wayland clipboard (`wl-copy`, `wl-paste`) |
+| `brightnessctl` | Brightness control (laptop) |
+| `playerctl` | Media key support |
+| `thunar` | File manager |
+| `stow` | Dotfile symlink manager |
+
+### System Tray / GUI Utilities
+
+| Package | Purpose |
+|---|---|
+| `pavucontrol` | Volume control (click Waybar volume) |
+| `blueman` | Bluetooth manager (click Waybar BT) |
+| `nm-connection-editor` | WiFi/Network manager (click Waybar WiFi) |
+| `networkmanager` | Network backend |
+
+### Fonts & Cursors
+
+| Package | Purpose |
+|---|---|
+| `ttf-roboto-mono` | UI font |
+| `ttf-font-awesome` | Icon font |
+| `bibata-cursor-theme` | Cursor theme (`Bibata-Modern-Ice`) |
+
+### Arch Install (one-liner)
+
+```bash
+# Core + Hyprland ecosystem
+sudo pacman -S hyprland waybar wofi dunst alacritty zsh neovim \
+  hyprpaper hyprlock hypridle \
+  wl-clipboard brightnessctl playerctl thunar stow \
+  pavucontrol blueman nm-connection-editor networkmanager \
+  ttf-roboto-mono ttf-font-awesome
+
+# AUR packages (via yay/paru)
+yay -S grimblast-git cliphist hyprpolkitagent bibata-cursor-theme
+```
+
+> **Note**: Package names may vary across distributions. The above are for Arch Linux.
+
+## Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/<your-user>/dotfiles.git ~/dotfiles
+   cd ~/dotfiles
+   ```
+
+2. **Stow the base config**:
+   ```bash
+   stow base
+   ```
+   This symlinks everything from `base/` into your `$HOME`.
+
+3. **Configure environment variables**:
+   ```bash
+   # For NVIDIA systems, edit directly:
+   vim ~/.config/hypr/conf.d/env.conf
+
+   # For AMD/Intel systems, use the example:
+   cp ~/.config/hypr/conf.d/env.conf.example ~/.config/hypr/conf.d/env.conf
+   ```
+
+4. **Set up secrets** (optional):
+   ```bash
+   # Create a private keybinds file (git-ignored):
+   touch ~/.config/hypr/conf.d/secret.conf
+   ```
+
+5. **Start Hyprland**:
+   ```bash
+   Hyprland
+   ```
+
 ## Secrets Management
 
 Sensitive information (like SSH commands with hardcoded passwords) is omitted from this repository. 
@@ -28,6 +130,21 @@ To use those keybinds locally:
 2. Define your private binds there (e.g., `bind = $mainMod, T, exec, ...`)
 3. The `.gitignore` ensures this file is never committed.
 
-## Installation
+## Keybinds
 
-*(Stow or symlink instructions can be added here depending on your preferred dotfile manager!)*
+| Key | Action |
+|---|---|
+| `Super + Return` | Terminal (Alacritty) |
+| `Super + D` | App launcher (Wofi) |
+| `Super + W` | Close window |
+| `Super + M` | Power menu |
+| `Super + L` | Lock screen |
+| `Super + S` | Screenshot (region) |
+| `Super + Shift + S` | Screenshot (full screen) |
+| `Super + C` | Clipboard history |
+| `Super + V` | Toggle floating |
+| `Super + F` | Fullscreen |
+| `Super + R` | Reload Hyprland + Waybar |
+| `Super + E` | File manager |
+| `Super + 1-5, 9` | Switch workspace |
+| `Super + Shift + 1-5, 9` | Move window to workspace |
