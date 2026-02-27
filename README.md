@@ -1,6 +1,11 @@
 # My Dotfiles
 
-![Preview](preview.png)
+<p align="center">
+  <img src="images/preview.png" width="49%" alt="Main Preview">
+  <img src="images/hyprlock.png" width="49%" alt="Lock Screen">
+  <img src="images/preview_wofi.png" width="49%" alt="App Launcher">
+  <img src="images/preview_logout.png" width="49%" alt="Power Menu">
+</p>
 
 A minimal and unified dotfiles configuration centered around **Hyprland** with a dark Gruvbox and Beige accent theme.
 
@@ -78,8 +83,9 @@ All UI components are unified under a specific aesthetic:
 ### Automatic
 
 ```bash
-git clone https://github.com/<your-user>/dotfiles.git ~/dotfiles
+git clone https://github.com/Innonq/dotfiles.git ~/dotfiles
 cd ~/dotfiles
+chmod +x setup.sh
 ./setup.sh
 ```
 
@@ -108,7 +114,7 @@ The script will:
 
 2. **Clone and stow**:
    ```bash
-   git clone https://github.com/<your-user>/dotfiles.git ~/dotfiles
+   git clone https://github.com/Innonq/dotfiles.git ~/dotfiles
    cd ~/dotfiles
    stow base
    ```
@@ -129,7 +135,7 @@ The script will:
 
 5. **Start Hyprland**:
    ```bash
-   Hyprland
+   start-hyprland
    ```
 
 ## Secrets Management
