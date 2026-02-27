@@ -71,48 +71,57 @@ All UI components are unified under a specific aesthetic:
 | `ttf-font-awesome` | Icon font |
 | `bibata-cursor-theme` | Cursor theme (`Bibata-Modern-Ice`) |
 
-### Arch Install (one-liner)
-
-```bash
-# Core + Hyprland ecosystem
-sudo pacman -S hyprland waybar wofi dunst alacritty zsh neovim \
-  hyprpaper hyprlock hypridle \
-  wl-clipboard brightnessctl playerctl thunar stow \
-  pavucontrol blueman nm-connection-editor networkmanager \
-  ttf-roboto-mono ttf-font-awesome
-
-# AUR packages (via yay/paru)
-yay -S grimblast-git cliphist hyprpolkitagent bibata-cursor-theme
-```
-
-> **Note**: Package names may vary across distributions. The above are for Arch Linux.
-
 ## Installation
 
-1. **Clone the repository**:
+### Automatic
+
+```bash
+git clone https://github.com/<your-user>/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+./setup.sh
+```
+
+The script will:
+- Install all packages (pacman + AUR)
+- Stow the configs into `$HOME`
+- Ask if you have an NVIDIA GPU and configure `env.conf` accordingly
+- Create an empty `secret.conf` for private keybinds
+- Enable NetworkManager and Bluetooth services
+- Set script permissions
+
+### Manual
+
+1. **Install dependencies** (Arch):
+   ```bash
+   # Core + Hyprland ecosystem
+   sudo pacman -S --needed hyprland waybar wofi dunst alacritty zsh neovim \
+     hyprpaper hyprlock hypridle \
+     wl-clipboard brightnessctl playerctl thunar stow \
+     pavucontrol blueman nm-connection-editor networkmanager \
+     ttf-roboto-mono ttf-font-awesome pipewire wireplumber
+
+   # AUR packages (via yay/paru)
+   yay -S --needed grimblast-git cliphist hyprpolkitagent bibata-cursor-theme
+   ```
+
+2. **Clone and stow**:
    ```bash
    git clone https://github.com/<your-user>/dotfiles.git ~/dotfiles
    cd ~/dotfiles
-   ```
-
-2. **Stow the base config**:
-   ```bash
    stow base
    ```
-   This symlinks everything from `base/` into your `$HOME`.
 
 3. **Configure environment variables**:
    ```bash
-   # For NVIDIA systems, edit directly:
-   vim ~/.config/hypr/conf.d/env.conf
+   # For NVIDIA:
+   # Edit env.conf directly (already contains NVIDIA vars)
 
-   # For AMD/Intel systems, use the example:
+   # For AMD/Intel:
    cp ~/.config/hypr/conf.d/env.conf.example ~/.config/hypr/conf.d/env.conf
    ```
 
-4. **Set up secrets** (optional):
+4. **Create secrets file**:
    ```bash
-   # Create a private keybinds file (git-ignored):
    touch ~/.config/hypr/conf.d/secret.conf
    ```
 
