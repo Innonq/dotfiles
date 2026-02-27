@@ -69,7 +69,7 @@ All UI components are unified under a specific aesthetic:
 |---|---|
 | `ttf-roboto-mono` | UI font |
 | `ttf-font-awesome` | Icon font |
-| `bibata-cursor-theme` | Cursor theme (`Bibata-Modern-Ice`) |
+| `bibata-cursor-theme-bin` | Cursor theme (`Bibata-Modern-Ice`) |
 
 ## Installation
 
@@ -101,7 +101,7 @@ The script will:
      ttf-roboto-mono ttf-font-awesome pipewire wireplumber
 
    # AUR packages (via yay/paru)
-   yay -S --needed grimblast-git cliphist hyprpolkitagent bibata-cursor-theme
+   yay -S --needed grimblast-git cliphist hyprpolkitagent bibata-cursor-theme-bin
    ```
 
 2. **Clone and stow**:

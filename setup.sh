@@ -57,7 +57,7 @@ AUR_PKGS=(
     grimblast-git
     cliphist
     hyprpolkitagent
-    bibata-cursor-theme
+    bibata-cursor-theme-bin
 )
 
 if [[ -n "$AUR" ]]; then
