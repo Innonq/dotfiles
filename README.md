@@ -1,5 +1,7 @@
 # My Dotfiles
 
+![Preview](preview.png)
+
 A minimal and unified dotfiles configuration centered around **Hyprland** with a dark Gruvbox and Beige accent theme.
 
 ## Components
